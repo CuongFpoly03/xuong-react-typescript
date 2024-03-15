@@ -1,0 +1,360 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.container-checkout {
+    margin: 0;
+    padding: 0;
+    .all-checkout {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        .checkout-left {
+            margin: 0;
+            padding: 0;
+            margin-left: 20%;
+            h3 {
+                font-size: 2rem;
+            }
+            .form {
+                margin: 0;
+                padding: 0;
+                .both-input {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    .inputfname {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        input {
+                            margin: 3% 0;
+                            padding: 4% 0;
+                            border-radius: 10px;
+                        }
+                    }
+                    .inputlname {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        input {
+                            margin: 3% 0;
+                            padding: 4% 0;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .inputlname {
+                    margin: 0;
+                    padding: 0;
+                    label {
+                        color: black;
+                        font-weight: bold;
+                    }
+                    input {
+                        margin: 3% 0;
+                        width: 70%;
+                        padding: 4% 7%;
+                        border-radius: 10px;
+                    }
+                }
+                .inputlname {
+                    margin: 0;
+                    padding: 0;
+                    label {
+                        color: black;
+                        font-weight: bold;
+                    }
+                    select {
+                        margin: 3% 0;
+                        width: 84.5%;
+                        padding: 4% 7%;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        .checkout-right {
+            margin: 0;
+            padding: 0;
+            .checkout-new {
+                margin: 0;
+                padding: 0;
+                .all-right-checkout {
+                    margin-top: 15%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 0;
+                }
+                .direc-bank {
+                    width: 100%;
+                    li {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    p {
+                        opacity: 0.5;
+                        font-size: 15px;
+                    }
+                    .radio-new {
+                        opacity: 0.5;
+                    }
+                    .button {
+                        padding: 3% 5%;
+                        border-radius: 15px;
+                        margin-left: 40%;
+                        margin-top: 6%;
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint-chieudoc) and (max-width: $tablet-breakpoint-chieudoc-to) {
+    @include tablet-table;
+    .container-checkout {
+        margin: 0;
+        padding: 0;
+        .all-checkout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            .checkout-left {
+                margin: 0;
+                padding: 0;
+                margin-left: 20%;
+                h3 {
+                    font-size: 2rem;
+                }
+                .form {
+                    margin: 0;
+                    font-size: 13px;
+                    padding: 0;
+                    .both-input {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        .inputfname {
+                            margin: 0;
+                            padding: 0;
+                            label {
+                                color: black;
+                                font-weight: bold;
+                            }
+                            input {
+                                width: 80%;
+                                margin: 3% 0;
+                                padding: 2% 0;
+                                border-radius: 10px;
+                            }
+                        }
+                        .inputlname {
+                            margin: 0;
+                            padding: 0;
+                            label {
+                                color: black;
+                                font-weight: bold;
+                            }
+                            input {
+                                width: 70%;
+                                margin: 3% 0;
+                                padding: 3% 0;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                    .inputlname {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        input {
+                            margin: 3% 0;
+                            width: 70%;
+                            padding: 4% 7%;
+                            border-radius: 10px;
+                        }
+                    }
+                    .inputlname {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        select {
+                            margin: 3% 0;
+                            width: 84.5%;
+                            padding: 4% 7%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            .checkout-right {
+                margin: 0;
+                padding: 0;
+                .checkout-new {
+                    margin: 0;
+                    padding: 0;
+                    .all-right-checkout {
+                        margin-top: 15%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 0;
+                    }
+                    .direc-bank {
+                        width: 100%;
+                        li {
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                        p {
+                            opacity: 0.5;
+                            font-size: 15px;
+                        }
+                        .radio-new {
+                            opacity: 0.5;
+                        }
+                        .button {
+                            padding: 3% 5%;
+                            border-radius: 15px;
+                            margin-left: 40%;
+                            margin-top: 6%;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint-chieungang) {
+    @include mobile-table;
+    .container-checkout {
+        margin: 0;
+        padding: 0;
+        .all-checkout {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 60px;
+            .checkout-left {
+                margin: 0;
+                padding: 0;
+                margin-left: 20%;
+                h3 {
+                    font-size: 2rem;
+                }
+                .form {
+                    margin: 0;
+                    font-size: 13px;
+                    padding: 0;
+                    .both-input {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        .inputfname {
+                            margin: 0;
+                            padding: 0;
+                            label {
+                                color: black;
+                                font-weight: bold;
+                            }
+                            input {
+                                width: 80%; 
+                                margin: 3% 0;
+                                padding: 2% 0;
+                                border-radius: 10px;
+                            }
+                        }
+                        .inputlname {
+                            margin: 0;
+                            padding: 0;
+                            label {
+                                color: black;
+                                font-weight: bold;
+                            }
+                            input {
+                                width: 70%;
+                                margin: 3% 0;
+                                padding: 3% 0;
+                                border-radius: 10px;
+                            }
+                        }
+                    }
+                    .inputlname {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        input {
+                            margin: 3% 0;
+                            width: 70%;
+                            padding: 4% 7%;
+                            border-radius: 10px;
+                        }
+                    }
+                    .inputlname {
+                        margin: 0;
+                        padding: 0;
+                        label {
+                            color: black;
+                            font-weight: bold;
+                        }
+                        select {
+                            margin: 3% 0;
+                            width: 84.5%;
+                            padding: 4% 7%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+            .checkout-right {
+                margin: 0;
+                padding: 0;
+                .checkout-new {
+                    margin: 0;
+                    padding: 0;
+                    .all-right-checkout {
+                        margin-left: 4%;
+                        margin-top: 15%;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 0;
+                    }
+                    .direc-bank {
+                        width: 100%;
+                        li {
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+                        p {
+                            opacity: 0.5;
+                            font-size: 15px;
+                        }
+                        .radio-new {
+                            opacity: 0.5;
+                        }
+                        .button {
+                            padding: 3% 5%;
+                            border-radius: 15px;
+                            margin-left: 30%;
+                            margin-top: 6%;
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

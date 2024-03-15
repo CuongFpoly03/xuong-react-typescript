@@ -1,0 +1,30 @@
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+.container {
+    max-width: 1206px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+}
+
+/* SECTION HEADING */
+.section-heading {
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    .section-heading__title {
+        font-size: 40px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0 0 10px 0;
+    }
+}

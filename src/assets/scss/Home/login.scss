@@ -1,0 +1,115 @@
+/* LOGIN */
+.login {
+    margin: 0;
+    padding: 0;
+
+    .form-login {
+        border: 1px solid red;
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        margin: 80px auto;
+        padding: 20px;
+
+        .login-top {
+            margin: 0;
+            padding: 0;
+            .form-close {
+                font-size: 16px;
+                border: 1px solid black;
+                border-radius: 4px;
+                padding: 2px 4px;
+                color: white;
+                font-weight: bold;
+                background-color: black;
+                margin: 10px 20px;
+                float: right;
+                cursor: pointer;
+            }
+        }
+
+        .form-title {
+            position: relative;
+            display: block;
+            text-align: center;
+            font-size: 40px;
+            color: #b88e2f;
+            padding: 0;
+            margin: 30px auto;
+        }
+
+        .login-field {
+            margin-left: 5%;
+            label {
+                color: #b88e2f;
+                font-weight: bold;
+            }
+            input {
+                width: 90%;
+                height: 40px;
+                margin: 10px 0;
+                padding-left: 20px;
+                border-radius: 10px;
+            }
+        }
+
+        .login-button {
+            padding: 0;
+            margin: 0;
+            button {
+                border: 1px solid #f9f1e7;
+                background-color: #f9f1e7;
+                padding: 14px 30px;
+                font-size: 20px;
+                margin-top: 20px;
+                cursor: pointer;
+                border-radius: 7px;
+                font-weight: bold;
+                margin-left: 38%;
+            }
+        }
+
+        .login-add-button {
+            padding: 0;
+            margin: 0;
+            .button-one,
+            .button-two {
+                width: 45%;
+                padding: 15px 0;
+                margin-top: 30px;
+                border-radius: 10px;
+                margin-left: 5%;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+            }
+
+            .button-one {
+                background-color: #0171d3;
+                border: 1px solid #0171d3;
+            }
+
+            .button-two {
+                color: black;
+                background-color: white;
+                border: 1px solid black;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .form-login {
+        width: 90%;
+        margin: 40px auto;
+    }
+
+    .login-field {
+        margin-left: 0;
+    }
+
+    .login-button button,
+    .login-add-button button {
+        /* width: 90%; */
+        margin: 0;
+    }
+}

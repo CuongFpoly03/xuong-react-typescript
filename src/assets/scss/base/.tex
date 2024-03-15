@@ -1,0 +1,17 @@
+// Thêm kiểu dáng cho tablet chiều ngang
+@media screen and (min-width: $tablet-breakpoint-horizontal) and (max-width: $tablet-breakpoint-horizontal-big - 1) {
+    @include tablet-table;
+}
+
+// Thêm kiểu dáng cho tablet chiều dọc
+@media screen and (min-width: $tablet-breakpoint-vertical) and (max-width: $tablet-breakpoint-vertical-big - 1) {
+    @include tablet-table;
+}
+
+// Thêm kiểu dáng cho desktop
+@media screen and (min-width: $desktop-breakpoint) {
+    @include table-desktop;
+}
+
+// Kiểu dáng chung cho tất cả các thiết bị
+@include mobile-table;

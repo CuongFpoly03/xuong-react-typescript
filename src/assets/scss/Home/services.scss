@@ -1,0 +1,95 @@
+@import "../base/mixins";
+@import "../base/variables";
+.services-pather {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    background-color: #faf3ea;
+    margin-top: 90px;
+    padding: 20px;
+    .services-children {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+
+        .services-attribute {
+            margin-left: 0;
+            padding: 0;
+            text-align: center;
+
+            h1 {
+                margin-top: 20px;
+            }
+        }
+        .services-attributes {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+            h5 {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+
+            p {
+                margin-top: 10px;
+                opacity: 0.9;
+                font-size: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .services-pather {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .services-children {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint-chieungang) {
+    @include mobile-table;
+    .services-pather {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #faf3ea;
+        margin-top: 90px;
+        padding: 20px;
+        .services-children {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+    
+            .services-attribute {
+                margin-left: 0;
+                padding: 0;
+                text-align: center;
+    
+                h1 {
+                    margin-top: 20px;
+                }
+            }
+            .services-attributes {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                h5 {
+                    font-size: 18px;
+                    margin-top: 10px;
+                }
+    
+                p {
+                    margin-top: 10px;
+                    opacity: 0.9;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+

@@ -11,27 +11,31 @@
         img {
             margin: 0;
             padding: 0;
+            width: 605px;
+            height: 250px;
         }
         .section-body__blog-text {
             margin: 0;
             padding: 0;
             h3 {
+                font-weight: bold;
+                font-size: 20px;
                 margin: 0;
                 padding: 0;
-            }
+                }
             p {
                 opacity: 0.8;
+                padding: 5% 0;
             }
             .blog-icon {
                 float: right;
-                padding: 24px 0;
+                padding: 32px 0;
                 width: 100%;
                 border-bottom: 1px solid black;
                 a {
                     float: right;
                     color: black;
                     text-decoration: none;
-                  
                 }
             }
         }
@@ -45,6 +49,8 @@
             grid-gap: 30px;
             img {
                 margin: 0;
+                width: 400px;
+                height: 200px;
                 padding: 0;
             }
             .section-body__blog-text {
@@ -66,8 +72,46 @@
                         float: right;
                         color: black;
                         text-decoration: none;
-                      
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint-chieudoc) and (max-width: $tablet-breakpoint-chieudoc-to) {
+    @include tablet-table;
+    .section-body__blog {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        img {
+            margin: 0;
+            width: 300px;
+            height: 250px;
+            padding: 0;
+        }
+        .section-body__blog-text {
+            margin: 0;
+            padding: 0;
+            h3 {
+                margin: 0;
+                padding: 0;
+            }
+            p {
+                opacity: 0.8;
+                padding: 5% 0;
+            }
+            .blog-icon {
+                float: right;
+                padding:0;
+                margin: 0;
+                width: 100%;
+                border-bottom: 1px solid black;
+                a {
+                    float: right;
+                    color: black;
+                    text-decoration: none;
                 }
             }
         }

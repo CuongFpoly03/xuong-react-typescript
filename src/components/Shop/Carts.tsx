@@ -13,7 +13,7 @@ const Carts = () => {
               <span className="subtotal">Subtotal</span>
             </div>
             <div className="title-tbody">
-              <img src="https://picsum.photos/id/3/76/80" alt="" />
+              <img src="https://s3-alpha-sig.figma.com/img/2ac4/13c1/917ac944454e358f73d0af67e1f1b74e?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VGXqfJhdHGKlr9GT-BbRl6NbRc9ItAIE~~IgzV8~xzu7xmsKI0PhYvgaxzRlc-YDr6I0XutICx7KYw-F2Yf0MuI5DmybaAGs~Pouiann6d0hSUSPEZn2zR4gNcQ-8qWdii66n0vDRw~Aewi0GtMVs7zxIjK7XHy4XxwcgbdVLQRAjy20ZDQwl3gWdhu5KKbPezpp3v1o1B2Y4lSb3O9~q4l67ArRpyXJfT1IiPNzfia~jjJ8PilOZRKT38FlBaB-APhDJ5UqAw6wjdXm2uP4PxisbcXXQ85UlPQI4Y6rFfAdxN7r3koLTvZIV4t6rt2WBKhd7l7Y2N22L3y1urfEDQ__" alt="" />
               <span>Asgaard sofa</span>
               <span>25.000.000đ</span>
               <span>

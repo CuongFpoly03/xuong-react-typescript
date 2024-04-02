@@ -1,0 +1,77 @@
+@import "../base/mixins";
+@import "../base/variables";
+
+.banner{
+    margin: 0;
+    padding: 0;
+    img{
+        width: 1440px;
+        height: 500px;
+    }
+    .title-banner {
+        position: absolute;
+        width: 1348px;
+        height: 500px;
+        background-color: rgba(0,0,0,0.2);
+        text-align: center;
+        h2{
+            margin-top: 10%;
+            font-size: 3rem;
+        }
+        h5{
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint-chieungang) {
+    @include mobile-table;
+    .banner{
+        margin: 0;
+        padding: 0;
+        img{
+            width: 482px;
+            height: 200px;
+        }
+        .title-banner {
+            position: absolute;
+            width:358px;
+            height: 200px;
+            background-color: rgba(0,0,0,0.2);
+            text-align: center;
+            h2{
+                margin-top: 10%;
+                font-size: 2rem;
+            }
+            h5{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $tablet-breakpoint-chieudoc) and (max-width: $tablet-breakpoint-chieudoc-to) {
+    @include tablet-table;
+    .banner{
+        margin: 0;
+        padding: 0;
+        img{
+            width: 1025px;
+            height: 380px;
+        }
+        .title-banner {
+            position: absolute;
+            width:750px;
+            height: 200px;
+            background-color: rgba(0,0,0,0.2);
+            text-align: center;
+            h2{
+                margin-top: 10%;
+                font-size: 2rem;
+            }
+            h5{
+                font-size: 18px;
+            }
+        }
+    }
+}

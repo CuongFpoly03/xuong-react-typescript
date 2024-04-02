@@ -1,3 +1,5 @@
+@import "../base/mixins";
+@import "../base/variables";
 .section-body {
     padding: 0;
     margin: 0;
@@ -5,10 +7,51 @@
     .section-body__shop {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+        gap: 29px;
         img {
             padding: 0;
             margin: 0;
+            width: 605px;
+            height: 469px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile-breakpoint-chieungang) {
+    @include mobile-table;
+    .section-body {
+        padding: 0;
+        margin: 0;
+        /* SECTION SHOP ---------------------------*/
+        .section-body__shop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 29px;
+            img {
+                padding: 0;
+                margin: 0;
+                width: 300px;
+                height: 150px;
+            }
+        }
+    }
+}
+@media screen and (min-width: $tablet-breakpoint-chieudoc) and (max-width: $tablet-breakpoint-chieudoc-to) {
+    @include tablet-table;
+    .section-body {
+        padding: 0;
+        margin: 0;
+        /* SECTION SHOP ---------------------------*/
+        .section-body__shop {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 29px;
+            img {
+                padding: 0;
+                margin: 0;
+                width: 350px;
+                height: 300px;
+            }
         }
     }
 }

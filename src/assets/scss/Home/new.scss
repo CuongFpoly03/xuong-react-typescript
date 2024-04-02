@@ -10,6 +10,14 @@
         position: relative;
         border-radius: 2px;
         overflow: hidden;
+        .product__thumbnail{
+            padding: 0;
+            margin: 0;
+            img {
+                width: 284px;
+                height: 301px;
+            }
+        }
     }
     .product-item:hover .product-content-extra {
         opacity: 1;
@@ -26,6 +34,7 @@
         }
         .product__cate {
             margin: 0px 10px;
+            text-decoration: none;
             color: #909090;
         }
         .product-price {
@@ -104,6 +113,14 @@
             position: relative;
             border-radius: 2px;
             overflow: hidden;
+            .product__thumbnail{
+                padding: 0;
+                margin: 0;
+                img {
+                    width: 284px;
+                    height: 150px;
+                }
+            }
         }
         .product-item:hover .product-content-extra {
             opacity: 1;
@@ -196,6 +213,14 @@
             position: relative;
             border-radius: 2px;
             overflow: hidden;
+            .product__thumbnail{
+                padding: 0;
+                margin: 0;
+                img {
+                    width: 284px;
+                    height: 250px;
+                }
+            }
         }
         .product-item:hover .product-content-extra {
             opacity: 1;

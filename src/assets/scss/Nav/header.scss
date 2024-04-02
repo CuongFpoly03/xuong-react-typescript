@@ -7,8 +7,21 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px 0;
-        a {
+        .img {
             margin: 0;
+            padding: 0;
+            display: flex;
+            text-decoration: none;
+            img {
+                width: 50px;
+                height: 32px;
+            }
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                list-style: none;
+                color: black;
+            }
         }
         .main-menu {
             .main-menu__list {
@@ -175,3 +188,17 @@
         display: none;
     }
 }
+
+//nav
+.hoverbig:hover .hidden {
+    display: block;
+}
+.hoverbigadmin:hover .function {
+    display: block;
+}
+
+//nav
+.userbig:hover .hidden {
+    display: block;
+}
+

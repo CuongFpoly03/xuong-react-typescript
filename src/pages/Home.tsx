@@ -21,7 +21,7 @@ const Home = () => {
       />
     </section>
       
-      <News />
+      <News />  
       <Shop />
       <Blog />
       <Sevices />

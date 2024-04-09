@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Skeleton } from "antd";
-import UseQueryUser from "../../../hooks/user/UseQueryUser";
-import { IUser } from "../../../interface/user";
-import UserMutationUser from "../../../hooks/user/UserMutationUser";
+import { IUser } from "../../../common/interface/user";
 import Swal from "sweetalert2";
+import UseQueryUser from "../../../common/hooks/user/UseQueryUser";
+import UserMutationUser from "../../../common/hooks/user/UserMutationUser";
 
 const Index = () => {
   const { data, isLoading } = UseQueryUser();

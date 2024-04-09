@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
-import UsemutationCategory from "../../../hooks/category/UsemutationCategory";
-import UsequeryCategory from "../../../hooks/category/UsequeryCategory";
 import { Skeleton } from "antd";
+import UsequeryCategory from "../../../common/hooks/category/UsequeryCategory";
+import UsemutationCategory from "../../../common/hooks/category/UsemutationCategory";
 const Updatecate = () => {
   const navigate = useNavigate();
   const { id } = useParams();

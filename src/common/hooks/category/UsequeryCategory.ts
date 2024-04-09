@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
-import { getAllCategory, getOneCategory } from "../../services/Category"
+import { getAllCategory, getOneCategory } from "../../../services/Category";
 
 const UsequeryCategory = (id?: number | string | undefined) => {
  const {data, ...rest} = useQuery({

@@ -1,11 +1,11 @@
-import UseProductQuery from "../../hooks/product/UseProductQuery";
-import { IProduct } from "../../interface/product";
+import {UseProductQuery} from "../../common/hooks/product/UseProductQuery";
+import { IProduct } from "../../common/interface/product";
 
 const News = () => {
-  const {data} = UseProductQuery();
-  // console.log(data);
-const product = Array.isArray(data) ? data.slice(0, 4) : [];
-// console.log(product);
+  const { data } = UseProductQuery();
+  console.log(data);
+  const product = Array.isArray(data) ? data.slice(0, 4) : [];
+  console.log(product);
   return (
     <section className="news">
       <div className="container">
@@ -14,13 +14,10 @@ const product = Array.isArray(data) ? data.slice(0, 4) : [];
         </div>
         <div className="section-body">
           <div className="products">
-            {product?.map((pro:IProduct, index:number) => (
+            {product.map((pro: IProduct, index: number) => (
               <div className="product-item" key={index}>
                 <div className="product__thumbnail">
-                  <img
-                    src={pro.imgPro}
-                    alt=""
-                  />
+                  <img src={pro.thumbnail} alt="" />
                   <span className="product__sale">50%</span>
                 </div>
                 <div className="product-content">

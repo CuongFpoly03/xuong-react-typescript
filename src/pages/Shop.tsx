@@ -1,12 +1,12 @@
-import Sevices from "../components/Home/Sevices"
-import { Footer } from "../components/nav/Footer"
-import Header from "../components/nav/Header"
-import Product from "../components/Shop/Product"
-import Top from  "../components/Shop/Top"
+import Sevices from "../components/Home/Sevices";
+import { Footer } from "../components/nav/Footer";
+import Header from "../components/nav/Header";
+import Product from "../components/Shop/Product";
+import Top from "../components/Shop/Top";
 const Shop = () => {
   return (
     <div>
-      <Header/>
+      <Header />
       <section className="banner">
         <div className="title-banner">
           <h2>Shop</h2>
@@ -19,12 +19,12 @@ const Shop = () => {
           alt=""
         />
       </section>
-      <Top/>
-      <Product/>
-      <Sevices/>
-      <Footer/>
+      <Top />
+      <Product />
+      <Sevices />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;

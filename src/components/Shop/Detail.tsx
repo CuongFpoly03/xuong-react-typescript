@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
-import UseProductQuery from "../../hooks/product/UseProductQuery";
+import {UserOneProductQuery} from "../../common/hooks/product/UseProductQuery";
 
 const Detail = () => {
   const {id} = useParams();
-  console.log(id)
-  const {data} = UseProductQuery(id);
-  console.log(data)
+  // console.log(id)
+  const {data} = UserOneProductQuery(id);
+  // console.log(data)
   if(!data) {
     return <p>loading ....</p>
   }
@@ -24,13 +24,13 @@ const Detail = () => {
         <div className="detail-both">
           <div className="detail-left">
             <div className="img-children">
-              <img src="https://s3-alpha-sig.figma.com/img/e8e6/980e/c9e9224b3002d53824688ecee9c882c5?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BOA6l0gi3XhMhB3pK-br-hW6rtSmrUS03kcg-P8TNDpRGkGJKcNcBraZJHE~y~YbhkZzpOHU0TrvcZDhhUqK--aAzD~H77MSeb4OgywukrNcI2apBIFoP8p5oeJTSPF2sSvUy2Y58mWfEQ00QuCcqoPHlimOfax2tXKKX9Kr4x-6-Eq2MRK7rYGQAyqYjumUNMWyo7wS7QFLsNHiyHuGRxiqX~Ks9TIu~TT5DRW3PaZOahUajbZbxWWVugS7BpKVhhnFWIVPZLMrMdR16e0HzBEAxkHZSeCAvYYQ9P8p26y0XzjBkyGKYb~2dKeVYYZFfltd5HOOkraAyi4ngOAYpw__" alt="" />
-              <img src="https://s3-alpha-sig.figma.com/img/4d65/4cce/148fae44b3bf6e9ac8ce6743c19e7de6?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dAPcYI1eME-ZmmSCOt4sqjv32GNoGNaLlX6Mw1YK4TadzL5VBq0pFl17a6H-ohiVDdQLqRjlysDbgop00B9gqWjy2ZBNCZ~34GKygoSoGfGmnrz71~V-RlitwOoBItUqyBAZIG9n9u926-FFasox8S551EixMSaAZWokuJUZ66EaT34-0ldWXLVxVS5v-LOkH2~nqAMJcaA8bMJn~j2lBJWWiY16B6lJ3CN02VtGjzhrMnBRRpS9sMTBwySBFnCCDR3hg3IhCj-Wd76u2JtHpZZNVM~PtujuqfmxisQMKXWe~RTPu3-Hpt8kXfy1drwotKg6iWwyEoxFjZpgXd5jmA__" alt="" />
-              <img src="https://s3-alpha-sig.figma.com/img/83ef/2293/24c656816d67a755100ac5f664833551?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hGZqWnzjngBCc9QlrTgRPukdVrLdS8uyKGPFO7ULURs3f313JmN87Prr6Jiqkp0FnHR1syz9ncjm6B5ceAiIUaICGKOYyb5B3x0xTVv51Gmx7-Kb7oRr0xUGXOPn-DSDCBaztY8R2weba15USrZESKgu-74CenM4I5ckSLwh9LdrX9zYJmxsdxfHA3GSD-0kgjXXAjDvS6S-4FWFQa~GgocgtDUtkctyd6PaHUNKmWMinjbvl07CcZlMDcqanEG3huoSn3RkvmDDsGKMx8fRw6cxxXIFNgkI6mws-yrIr8QtQpWsPDYpFrmHwfum54btDNcNIOOyOeHKHNOTOeON~Q__" alt="" />
-              <img src="https://s3-alpha-sig.figma.com/img/75ae/609a/0c46ac4eb9c274966b1133cb71128f16?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=POReciVO1F2mfNjDW13UBBQiTKZKkffMjIka59CNmZE6QkmzrKpawKESEmhiWqs4jAa0kAMJQzyUH7NT~Yby955Etx7~0bpkNBWQMAKN6eetAx-KnwNtY7LUFwpgofqjpO~fGZom-6-uZBu2UYaTFCRlRgXEPceCRrqjR-2g6G4H-i-4LRpCa~~iI-1QQqc9rHGStp6yCHB96qKKcZd7Nk1HQvOiplTNbtmVbAuCkgWE0nvJ3OsmyIqmV20w8RakX6k-sDwYIg4zvxcW5ccHtDCJSabPgwULfDeTKmsmTRRtabKoyW5eMEfvCZd~mMwUR2zmj1QXmk2hE2AWOB2fCg__" alt="" />
+            {data.imgPro?.map((img: string, index: number) => (
+
+              <img key={index}  src={img} alt="" />
+            ) )}
             </div>
             <div className="img-parser">
-              <img src={data.imgPro} alt="" />
+              <img src={data.thumbnail} alt="" />
             </div>
           </div>
           <div className="detail-right">
@@ -65,9 +65,7 @@ const Detail = () => {
                   Color
                 </label>{" "}
                 <br></br>
-                <button className="box-one"></button>
-                <button className="box-two"></button>
-                <button className="box-three"></button>
+                <button className="" style={{backgroundColor: data.color}}></button>
               </div>
               <div className="quantity-detail">
                 <div className="div-button">

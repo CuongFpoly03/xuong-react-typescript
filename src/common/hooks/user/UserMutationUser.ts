@@ -1,16 +1,18 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useMutation } from "@tanstack/react-query";
-import { IUser } from "../../interface/user";
 import axios from "axios";
-import Cookies from "js-cookie";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { IUser } from "../../interface/user";
+import { useLocalStorage } from "../cart/UseStorage";
+import Cookies from "js-cookie";
 type useMutations = {
   action: "DELETE" | "LOGIN" | "LOGOUT";
   onSuccess?: () => void;
   onErrors?: () => void;
 };
 const UserMutationUser = ({ action, onSuccess, onErrors }: useMutations) => {
+  const [, setUser] = useLocalStorage("user", {});
   const { mutate, ...rest } = useMutation({
     mutationFn: async (user: IUser | any) => {
       switch (action) {
@@ -18,17 +20,21 @@ const UserMutationUser = ({ action, onSuccess, onErrors }: useMutations) => {
           await axios.delete(`http://localhost:3000/users/delete/${user}`);
           break;
         case "LOGIN":
-          const response = await axios.post(
-            `http://localhost:3000/auths/signin`,
-            user
-          );
-          const token = response.data.token;
-          // lưu token vào cooki
-          // console.log(token);
-          Cookies.set("token", token);
-          break;
+          try {
+            const response = await axios.post(
+              `http://localhost:3000/auths/signin`,
+              user
+            );
+            const data = response.data;
+            setUser(data); // Lưu thông tin người dùng vào localStorage
+            Cookies.set("token", data.token); // Lưu token vào cookie
+            return data;
+          } catch (error) {
+            throw new Error("Đăng nhập thất bại"); // Ném lỗi để xử lý ở onError
+          }
         case "LOGOUT":
           Cookies.remove("token");
+          setUser(null);
           break;
         default:
           return null;

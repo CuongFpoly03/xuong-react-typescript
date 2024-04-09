@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
-import UserMutationUser from "../../hooks/user/UserMutationUser";
 import Swal from "sweetalert2";
+import UserMutationUser from "../../common/hooks/user/UserMutationUser";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -35,11 +35,11 @@ const Header = () => {
       });
     },
   });
-  console.log(logout);
+  // console.log(logout);
   const toggleResponsiveMenu = () => {
     setMenushow(!menushow);
   };
-  console.log(isLoggedIn);
+  // console.log(isLoggedIn);
   return (
     <header className="header">
       <div className="container">

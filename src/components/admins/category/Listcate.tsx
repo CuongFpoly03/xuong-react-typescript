@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Link } from "react-router-dom";
-import UsequeryCategory from "../../../hooks/category/UsequeryCategory";
-import { ICategory } from "../../../interface/category";
-import UsemutationCategory from "../../../hooks/category/UsemutationCategory";
+import { ICategory } from "../../../common/interface/category";
 import Swal from "sweetalert2";
+import UsequeryCategory from "../../../common/hooks/category/UsequeryCategory";
+import UsemutationCategory from "../../../common/hooks/category/UsemutationCategory";
 
 const Listcate = () => {
   const { data } = UsequeryCategory();

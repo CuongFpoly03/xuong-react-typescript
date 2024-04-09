@@ -1,14 +1,11 @@
 import { Link } from "react-router-dom";
 
 const Navadmin = () => {
- 
   return (
     <div className="admin bg-whit">
       <div className="top-nav grid grid-cols-2">
         <div className="py-2">
-          <p className="text-3xl font-bold italic">
-            Manager Products
-          </p>
+          <p className="text-3xl font-bold italic">Manager Products</p>
         </div>
         <div className="py-2">
           <ul className="flex float-right">
@@ -41,10 +38,18 @@ const Navadmin = () => {
                     Users
                   </Link>
                 </li>
+                <li className="my-2 font-bold text-base">
+                  <Link
+                    className="hover:border-b-2 hover:border-solid hover:border-black"
+                    to="/admin/order"
+                  >
+                    order
+                  </Link>
+                </li>
               </div>
             </li>
             <li className="text-4xl">
-              <Link  to="">
+              <Link to="">
                 <i className="fa-solid fa-circle-half-stroke"></i>
               </Link>
             </li>
@@ -60,7 +65,7 @@ const Navadmin = () => {
                     className="hover:border-b-2 hover:border-solid hover:border-black "
                     to="/"
                   >
-                    Logout
+                    Thoát
                   </Link>
                 </li>
               </div>

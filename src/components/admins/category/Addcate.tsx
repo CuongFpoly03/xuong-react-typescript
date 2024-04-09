@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
-import UsemutationCategory from "../../../hooks/category/UsemutationCategory";
+import UsemutationCategory from "../../../common/hooks/category/UsemutationCategory";
 
 const Addcate = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import UserMutationUser from "../../hooks/user/UserMutationUser";
+import UserMutationUser from "../../common/hooks/user/UserMutationUser";
 // const signinSchema = Joi.object({
 //   email: Joi.string()
 //       .email({ tlds: { allow: false } })
